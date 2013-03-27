@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <title></title>
+</head>
+<body>
+<div></div>
+<img class="album_img" src="#">
+</body>
+<script>
+    $.ajax({
+        type: "GET",
+        url: "http://api-fotki.yandex.ru/api/users/aig1001/album/63684/",
+        //url: "http://api-fotki.yandex.ru/api/users/aig1001/album/63684/photos/",
+        data: "format=json",
+        dataType: "jsonp",
+        success: function(data){
+            console.log(data);
+            $('div').text(data.title);
+
+            var all_album_img = $('.album_img');
+            console.log(data.img.S.href);
+            all_album_img.attr('src', data.img.S.href);
+        }
+    });
+
+</script>
+</html>
