@@ -22,8 +22,9 @@ body {
     float: left;
     width: 50px;
     text-align: center;
-    font-size: 70px;
-    display: inline-block;
+    font-size: 72px;
+    cursor: pointer;
+    display: none;
     vertical-align: middle;
 }
 .main_img_pref div, .main_img_next div {
@@ -98,11 +99,11 @@ body {
     z-index: 20;
 }
 #load_photo {
-    margin: -36px 0 0 -40px;
+    margin: -42px 0 0 -46px;
     left: 50%;
     top: 50%;
     background-color: white;
-    padding: 6px;
+    padding: 12px;
     position: fixed;
     display: none;
     z-index: 30;
