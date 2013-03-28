@@ -2,29 +2,33 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <title></title>
+    <script src="jquery.mousewheel.js"></script>
+    <script src="jquery_cookie.js"></script>
+    <script src="interaktiv.js"></script>
+    <title>Альбум</title>
 </head>
 <body>
-<div></div>
-<img class="album_img" src="#">
+<div class="div_main_img">
+    <div class="main_img_pref"><div>‹</div></div>
+    <img class="main_img" src="">
+    <div class="main_img_next"><div>›</div></div>
+</div>
+
+<div class="bottom">
+    <div class="bottom_div">
+        <span class="album_author"><a href="#"></a></span>
+        <span class="bottom_album">альбом</span>
+        <span class="album_title"><a href="#"></a></span>
+        <span class="bottom_photo">фото <span id="numPhoto"></span> из <span id="allPhoto"></span></span>
+        <span class="album_photo_title"><a href="#"></a></span>
+    </div>
+    <div class="scroll">
+    </div>
+</div>
+
+<div id="shadow"></div>
+<div id="load_photo">Загрузка...</div>
 </body>
-<script>
-    $.ajax({
-        type: "GET",
-        url: "http://api-fotki.yandex.ru/api/users/aig1001/album/63684/",
-        //url: "http://api-fotki.yandex.ru/api/users/aig1001/album/63684/photos/",
-        data: "format=json",
-        dataType: "jsonp",
-        success: function(data){
-            console.log(data);
-            $('div').text(data.title);
-
-            var all_album_img = $('.album_img');
-            console.log(data.img.S.href);
-            all_album_img.attr('src', data.img.S.href);
-        }
-    });
-
-</script>
 </html>
