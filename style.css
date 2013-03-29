@@ -33,14 +33,6 @@ body {
 .main_img_next {
     float: left;
 }
-/*.main_img_pref:hover {*/
-    /*background-color: rgba(184, 184, 184, 0.11);*/
-    /*cursor: pointer;*/
-/*}*/
-/*.main_img_next:hover {*/
-    /*background-color: rgba(184, 184, 184, 0.11);*/
-    /*cursor: pointer;*/
-/*}*/
 #selected {
     border: 4px #ea9a3a solid;
 }
