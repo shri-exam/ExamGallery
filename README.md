@@ -1,4 +1,4 @@
-ExamGallery
+http://shri-exam.github.com/ExamGallery
 ===========
 
 Использовал API Яндекс.Фоток. Выводил в галерею только первые 100 фотографий альбома.
